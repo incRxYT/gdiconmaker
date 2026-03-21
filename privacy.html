@@ -13,19 +13,19 @@
             margin: 0 auto;
             padding: 40px 20px;
         }
-        
+
         .privacy-content {
             background: var(--bg-white);
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
         }
-        
+
         .privacy-content h1 {
             color: var(--text-dark);
             margin-bottom: 10px;
         }
-        
+
         .privacy-content h2 {
             color: var(--primary);
             margin-top: 30px;
@@ -34,17 +34,17 @@
             border-bottom: 2px solid var(--bg-light);
             padding-bottom: 5px;
         }
-        
+
         .privacy-content p, .privacy-content li {
             color: var(--text-dark);
             line-height: 1.8;
             margin-bottom: 15px;
         }
-        
+
         .privacy-content ul {
             margin-left: 20px;
         }
-        
+
         .back-link {
             display: inline-block;
             margin-top: 20px;
@@ -56,13 +56,13 @@
             font-weight: 600;
             transition: all 0.3s ease;
         }
-        
+
         .back-link:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
             background: linear-gradient(135deg, var(--primary-light), var(--primary));
         }
-        
+
         .highlight {
             background: var(--bg-light);
             padding: 20px;
@@ -80,7 +80,7 @@
         a:hover {
             color: var(--primary);
         }
-        
+
         code {
             background: var(--bg-light);
             padding: 2px 8px;
@@ -94,74 +94,70 @@
 <body>
     <div class="privacy-container">
         <div class="privacy-content">
-            <h1>🔒 Privacy Policy</h1>
+            <h1>Privacy Policy</h1>
             <p><em>Last Updated: February 4, 2026</em></p>
-            
+
             <div class="highlight">
-                <strong>TL;DR:</strong> We don't store your data. Your images are processed temporarily and immediately deleted. No tracking, no accounts, no BS.
+                <strong>TL;DR:</strong> Everything runs in your browser. Your images never leave your device. No tracking, no accounts, no bs.
             </div>
-            
+
             <h2>What We Collect</h2>
-            <p><strong>Short answer: Nothing permanently.</strong></p>
+            <p><strong>Short answer: nothing.</strong></p>
             <ul>
-                <li>When you upload an image, it's temporarily stored on our server for processing (less than 5 seconds)</li>
-                <li>After your icon pack is generated, all uploaded images and temporary files are automatically deleted</li>
-                <li>We count total visits and icons made for the counter (anonymous, no personal data)</li>
+                <li>Your images are processed entirely on your device using the browser's Canvas API — they are never uploaded anywhere</li>
+                <li>The ZIP file is generated locally and downloaded straight to your device</li>
+                <li>We store a download counter in your browser's localStorage only to enforce the daily limit client-side</li>
             </ul>
-            
+
             <h2>What We DON'T Collect</h2>
             <ul>
-                <li>❌ No user accounts</li>
-                <li>❌ No email addresses</li>
-                <li>❌ No IP addresses stored</li>
-                <li>❌ No cookies for tracking</li>
-                <li>❌ No analytics software (Google Analytics, etc.)</li>
-                <li>❌ No databases</li>
+                <li>No user accounts</li>
+                <li>No email addresses</li>
+                <li>No IP addresses</li>
+                <li>No cookies for tracking</li>
+                <li>No analytics (Google Analytics, etc.)</li>
+                <li>No databases</li>
+                <li>No server — this site is fully static</li>
+                <li>Google AdSense — for displaying ads cuz i need those $$$ (still not there yet)</li>
             </ul>
-            
+
             <h2>How Your Images Are Handled</h2>
             <ol>
-                <li>You upload an image → Temporarily stored on server</li>
-                <li>PHP processes it (resize, rotate, place on template)</li>
-                <li>ZIP file created in /downloads/ folder</li>
-                <li>You download the ZIP</li>
-                <li>ZIP file is automatically deleted after download</li>
-                <li>All temporary files deleted immediately</li>
+                <li>You pick an image — it stays on your device the whole time</li>
+                <li>The browser resizes and composites it onto the GD templates using Canvas</li>
+                <li>JSZip packages everything into a ZIP file in memory</li>
+                <li>The ZIP gets downloaded directly to your device</li>
+                <li>Nothing was ever sent anywhere</li>
             </ol>
-            
-            <h2>Data Retention</h2>
-            <p>We retain <strong>ZERO</strong> personal data. The only things that persist are:</p>
-            <ul>
-                <li>Anonymous visit counter (just a number, no user info)</li>
-                <li>Anonymous icons created counter (just a number, no user info)</li>
-            </ul>
-            
+
             <h2>Third-Party Services</h2>
-            <p>We don't use any third-party analytics, tracking, or advertising services.</p>
-            <p>The only external links are:</p>
+            <p>We load a couple of external scripts to make the site work:</p>
             <ul>
-                <li>Nerd Fonts CDN (for icons)</li>
-                <li>Social media links (YouTube, Twitch, GitHub, donation page)</li>
+                <li>Nerd Fonts CDN (icons)</li>
+                <li>JSZip via cdnjs (ZIP generation)</li>
+                <li>canvas-confetti via jsDelivr (the fun stuff)</li>
+                <li>Ko-fi widget (only loads if you click donate)</li>
             </ul>
-            
+            <p>Social links in the footer go to YouTube, Twitch, GitHub, and Discord — those are just links, nothing loads unless you click them.</p>
+
             <h2>Open Source</h2>
-            <p>This tool is open source! You can view the entire codebase on GitHub:</p>
+            <p>The whole codebase is public on GitHub:</p>
             <p><a href="https://github.com/MalikHw/GDIconMaker" target="_blank">github.com/MalikHw/GDIconMaker</a></p>
-            
+
             <h2>Your Rights</h2>
-            <p>Since we don't collect or store personal data, there's nothing to request, delete, or export. You're free to use the tool anonymously.</p>
-            
+            <p>Since nothing gets collected or stored on our end, there's nothing to request, delete, or export. You're completely anonymous.</p>
+
             <h2>Changes to This Policy</h2>
-            <p>If we ever change how we handle data, we'll update this page. Check the "Last Updated" date at the top.</p>
-            
+            <p>If anything changes, we'll update this page. Check the date at the top.</p>
+
             <h2>Contact</h2>
-            <p>Questions? Reach out via:</p>
             <ul>
                 <li>GitHub: <a href="https://github.com/MalikHw" target="_blank">@MalikHw</a></li>
                 <li>YouTube: <a href="https://youtube.com/@MalikHw47" target="_blank">@MalikHw47</a></li>
+                <li>Discord: <a href="https://discord.gg/5MaBbtTy" target="_blank">MalikHw</a></li>
             </ul>
-            
-            <a href="index.php" class="back-link">← Back to Icon Maker</a>
+
+            <a href="index.html" class="back-link">← Back to Icon Maker</a>
         </div>
     </div>
 </body>
