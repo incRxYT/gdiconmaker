@@ -1,0 +1,17 @@
+{
+  "name": "GDIconMaker",
+  "short_name": "GDIconMaker",
+  "description": "Create custom Geometry Dash icon packs from any picture!",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#667eea",
+  "icons": [
+    {
+      "src": "pack.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
