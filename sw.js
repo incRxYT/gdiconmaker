@@ -1,4 +1,4 @@
-const CACHE_NAME = 'gdiconmaker-v3';
+const CACHE_NAME = 'gdiconmaker-v4';
 
 const CORE_ASSETS = [
   './',
